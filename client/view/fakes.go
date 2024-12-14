@@ -17,7 +17,7 @@ package view
 import (
 	"context"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 type fakeGraphController struct{}

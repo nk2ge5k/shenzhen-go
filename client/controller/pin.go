@@ -15,9 +15,9 @@
 package controller
 
 import (
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
-	pb "github.com/google/shenzhen-go/proto/js"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
+	pb "shenzhen-go/proto/js"
 )
 
 type pinController struct {

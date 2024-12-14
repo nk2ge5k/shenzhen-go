@@ -1,6 +1,6 @@
 {
 	"name": "Key Counter",
-	"package_path": "github.com/google/shenzhen-go/examples/keycount",
+	"package_path": "shenzhen-go/examples/keycount",
 	"is_command": true,
 	"nodes": {
 		"Count words": {

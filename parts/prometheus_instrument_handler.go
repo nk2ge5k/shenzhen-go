@@ -17,8 +17,8 @@ package parts
 import (
 	"fmt"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 var prometheusInstrumentHandlerPins = pin.NewMap(
@@ -142,7 +142,7 @@ func (h *PrometheusInstrumentHandler) Clone() model.Part {
 func (h *PrometheusInstrumentHandler) Impl(n *model.Node) model.PartImpl {
 	return model.PartImpl{
 		Imports: []string{
-			`"github.com/google/shenzhen-go/parts"`,
+			`"shenzhen-go/parts"`,
 			`"github.com/prometheus/client_golang/prometheus"`,
 			`"github.com/prometheus/client_golang/prometheus/promhttp"`,
 		},

@@ -1,6 +1,6 @@
 {
 	"name": "Cache",
-	"package_path": "github.com/google/shenzhen-go/examples/cache",
+	"package_path": "shenzhen-go/examples/cache",
 	"is_command": true,
 	"nodes": {
 		"Cache": {

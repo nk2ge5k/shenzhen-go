@@ -21,8 +21,8 @@ import (
 
 	"gopkg.in/d4l3k/messagediff.v1"
 
-	"github.com/google/shenzhen-go/model/pin"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model/pin"
+	"shenzhen-go/source"
 )
 
 func init() {

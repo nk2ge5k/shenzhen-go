@@ -1,6 +1,6 @@
 {
 	"name": "Zip",
-	"package_path": "github.com/google/shenzhen-go/examples/zip",
+	"package_path": "shenzhen-go/examples/zip",
 	"is_command": false,
 	"nodes": {
 		"Closer": {

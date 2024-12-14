@@ -14,7 +14,7 @@
 
 package model
 
-import "github.com/google/shenzhen-go/source"
+import "shenzhen-go/source"
 
 // Channel represents connections between pins.
 type Channel struct {

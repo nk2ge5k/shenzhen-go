@@ -12,14 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//+build js
+//go:build js
+// +build js
 
 package parts
 
 import (
 	"strings"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 var (

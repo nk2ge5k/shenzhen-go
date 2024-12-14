@@ -1,6 +1,6 @@
 {
 	"name": "Broadcast and Gather",
-	"package_path": "github.com/google/shenzhen-go/examples/broadcast_gather",
+	"package_path": "shenzhen-go/examples/broadcast_gather",
 	"is_command": false,
 	"nodes": {
 		"Broadcast": {

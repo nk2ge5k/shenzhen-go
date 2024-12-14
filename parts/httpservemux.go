@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
+	"shenzhen-go/source"
 )
 
 // Look up the handler, assert type, and forward the original *HTTPRequest.
@@ -186,7 +186,7 @@ func (m *HTTPServeMux) Impl(n *model.Node) model.PartImpl {
 	}
 	imps := []string{
 		`"net/http"`,
-		`"github.com/google/shenzhen-go/parts"`,
+		`"shenzhen-go/parts"`,
 	}
 	if m.EnablePrometheus {
 		imps = append(imps,

@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
-go build github.com/google/shenzhen-go/...
-go test github.com/google/shenzhen-go/client/view \
-  github.com/google/shenzhen-go/examples \
-  github.com/google/shenzhen-go/model \
-  github.com/google/shenzhen-go/server \
-  github.com/google/shenzhen-go/server/view \
-  github.com/google/shenzhen-go/source 
+go build shenzhen-go/...
+go test shenzhen-go/client/view \
+  shenzhen-go/examples \
+  shenzhen-go/model \
+  shenzhen-go/server \
+  shenzhen-go/server/view \
+  shenzhen-go/source 
 exit 0

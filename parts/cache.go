@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 const (

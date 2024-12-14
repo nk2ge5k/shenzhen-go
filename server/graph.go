@@ -26,9 +26,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/server/view"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model"
+	"shenzhen-go/server/view"
+	"shenzhen-go/source"
 )
 
 var identifierRE = regexp.MustCompile(`^[_a-zA-Z][_a-zA-Z0-9]*$`)

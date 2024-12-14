@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 const (

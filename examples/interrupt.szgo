@@ -1,6 +1,6 @@
 {
 	"name": "Interrupt",
-	"package_path": "github.com/google/shenzhen-go/examples/interrupt",
+	"package_path": "shenzhen-go/examples/interrupt",
 	"is_command": true,
 	"nodes": {
 		"Code": {

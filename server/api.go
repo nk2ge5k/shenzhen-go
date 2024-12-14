@@ -20,12 +20,12 @@ import (
 	"log"
 	"os/exec"
 
-	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/encoding/prototext"
 
-	"github.com/google/shenzhen-go/model"
-	pb "github.com/google/shenzhen-go/proto/go"
+	"shenzhen-go/model"
+	pb "shenzhen-go/proto/go"
 )
 
 type actionStreamWriter struct {
@@ -40,7 +40,7 @@ func (a actionStreamWriter) Write(b []byte) (int, error) {
 }
 
 func (c *server) Action(req *pb.ActionRequest, stream pb.ShenzhenGo_ActionServer) error {
-	log.Printf("api: Action(%s)", proto.MarshalTextString(req))
+	log.Printf("api: Action(%s)", prototext.Format(req))
 	g, err := c.lookupGraph(req.Graph)
 	if err != nil {
 		return err
@@ -139,7 +139,7 @@ func (c *server) Run(svr pb.ShenzhenGo_RunServer) error {
 }
 
 func (c *server) SetChannel(ctx context.Context, req *pb.SetChannelRequest) (*pb.Empty, error) {
-	log.Printf("api: SetChannel(%s)", proto.MarshalTextString(req))
+	log.Printf("api: SetChannel(%s)", prototext.Format(req))
 
 	if req.Channel == "" && req.Config == nil {
 		return &pb.Empty{}, status.Error(codes.InvalidArgument, "must provide existing channel or new config")
@@ -211,7 +211,7 @@ func (c *server) SetChannel(ctx context.Context, req *pb.SetChannelRequest) (*pb
 }
 
 func (c *server) SetGraphProperties(ctx context.Context, req *pb.SetGraphPropertiesRequest) (*pb.Empty, error) {
-	log.Printf("api: SetGraphProperties(%s)", proto.MarshalTextString(req))
+	log.Printf("api: SetGraphProperties(%s)", prototext.Format(req))
 	g, err := c.lookupGraph(req.Graph)
 	if err != nil {
 		return &pb.Empty{}, err
@@ -223,7 +223,7 @@ func (c *server) SetGraphProperties(ctx context.Context, req *pb.SetGraphPropert
 }
 
 func (c *server) SetNode(ctx context.Context, req *pb.SetNodeRequest) (*pb.Empty, error) {
-	log.Printf("api: SetNode(%s)", proto.MarshalTextString(req))
+	log.Printf("api: SetNode(%s)", prototext.Format(req))
 
 	if req.Node == "" && req.Config == nil {
 		return &pb.Empty{}, status.Error(codes.InvalidArgument, "must provide existing node or new config")
@@ -293,7 +293,7 @@ func (c *server) SetNode(ctx context.Context, req *pb.SetNodeRequest) (*pb.Empty
 }
 
 func (c *server) SetPosition(ctx context.Context, req *pb.SetPositionRequest) (*pb.Empty, error) {
-	log.Printf("api: SetPosition(%s)", proto.MarshalTextString(req))
+	log.Printf("api: SetPosition(%s)", prototext.Format(req))
 	g, err := c.lookupGraph(req.Graph)
 	if err != nil {
 		return &pb.Empty{}, err

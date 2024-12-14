@@ -15,8 +15,8 @@
 package model
 
 import (
-	"github.com/google/shenzhen-go/model/pin"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model/pin"
+	"shenzhen-go/source"
 )
 
 // FakePart fakes a part type for testing purposes.

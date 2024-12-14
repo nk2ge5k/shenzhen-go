@@ -17,8 +17,8 @@ package parts
 import (
 	"strings"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 // CodePanels are subpanels for editing code-type parts.

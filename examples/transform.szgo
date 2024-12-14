@@ -1,6 +1,6 @@
 {
 	"name": "Transform",
-	"package_path": "github.com/google/shenzhen-go/examples/transform",
+	"package_path": "shenzhen-go/examples/transform",
 	"is_command": true,
 	"nodes": {
 		"Generate some numbers": {

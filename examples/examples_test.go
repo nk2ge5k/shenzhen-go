@@ -19,9 +19,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/google/shenzhen-go/model"
-	_ "github.com/google/shenzhen-go/parts"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model"
+	_ "shenzhen-go/parts"
+	"shenzhen-go/source"
 )
 
 func TestLoadAndGoExamples(t *testing.T) {
@@ -29,7 +29,7 @@ func TestLoadAndGoExamples(t *testing.T) {
 	if err != nil {
 		t.Fatalf("GoPath() = error %v", err)
 	}
-	glob := filepath.Join(gp, "src", "github.com/google/shenzhen-go/examples/*.szgo")
+	glob := filepath.Join(gp, "src", "shenzhen-go/examples/*.szgo")
 	exs, err := filepath.Glob(glob)
 	if err != nil {
 		t.Fatalf("Glob(%s) = error %v", glob, err)

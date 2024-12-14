@@ -18,10 +18,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/google/shenzhen-go/client/view"
-	"github.com/google/shenzhen-go/dom"
-	"github.com/google/shenzhen-go/model"
-	pb "github.com/google/shenzhen-go/proto/js"
+	"shenzhen-go/client/view"
+	"shenzhen-go/dom"
+	"shenzhen-go/model"
+	pb "shenzhen-go/proto/js"
 )
 
 type partEditor struct {

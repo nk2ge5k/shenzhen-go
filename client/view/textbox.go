@@ -14,7 +14,7 @@
 
 package view
 
-import "github.com/google/shenzhen-go/dom"
+import "shenzhen-go/dom"
 
 // TextBox is an SVG group containing a filled rectangle and text.
 type TextBox struct {

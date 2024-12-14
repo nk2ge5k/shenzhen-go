@@ -1,6 +1,6 @@
 # "SHENZHEN GO" (working title)
 
-[![Doc Status](https://godoc.org/github.com/google/shenzhen-go?status.svg)](https://godoc.org/github.com/google/shenzhen-go) [![license](https://img.shields.io/github/license/google/shenzhen-go.svg?maxAge=2592000)](https://github.com/google/shenzhen-go/blob/main/LICENSE)
+[![Doc Status](https://godoc.org/shenzhen-go?status.svg)](https://godoc.org/shenzhen-go) [![license](https://img.shields.io/github/license/google/shenzhen-go.svg?maxAge=2592000)](https://shenzhen-go/blob/main/LICENSE)
 
 | :warning: WARNING: This repository is currently unmaintained, and the project is not being worked on. |
 | --- |
@@ -29,10 +29,10 @@ See the getting-started guides at https://google.github.io/shenzhen-go.
 
 Choose one of:
 
-    git clone https://github.com/google/shenzhen-go && cd shenzhen-go && go install
-    git clone https://github.com/google/shenzhen-go && cd shenzhen-go && go install -tags webview
-    go get -u github.com/google/shenzhen-go
-    go get -u -tags webview github.com/google/shenzhen-go
+    git clone https://shenzhen-go && cd shenzhen-go && go install
+    git clone https://shenzhen-go && cd shenzhen-go && go install -tags webview
+    go get -u shenzhen-go
+    go get -u -tags webview shenzhen-go
 
 ## Notes
 

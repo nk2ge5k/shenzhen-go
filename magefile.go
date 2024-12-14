@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build mage
 // +build mage
 
 package main
@@ -33,7 +34,11 @@ func GenGoProtoStubs() error {
 	if !mod {
 		return nil
 	}
-	return sh.Run("protoc", "-I=proto", "shenzhen-go.proto", "--go_out=plugins=grpc:proto/go")
+	return sh.Run("protoc", "-I=proto", "shenzhen-go.proto",
+		"--go_opt=paths=source_relative",
+		"--go_out=proto/go",
+		"--go-grpc_opt=paths=source_relative",
+		"--go-grpc_out=proto/go")
 }
 
 // Runs protoc to generate protobuf stubs in proto/js.
@@ -64,16 +69,19 @@ func BuildClient() error {
 	// Force GOOS=linux to support building on Windows, and also
 	// help keep the file stable (I dev on both Linux and macOS).
 	env := map[string]string{
-		"GOOS": "linux",
+		"GOOS":   "js",
+		"GOARCH": "ecmascript",
 	}
-	return sh.RunWith(env, "gopherjs", "build", "-o", "server/view/js/client.js", "github.com/google/shenzhen-go/client")
+	return sh.RunWith(env, "gopherjs", "build", "-o", "server/view/js/client.js", "shenzhen-go/client")
 }
 
 // Embeds static content into static-*.go files in the server/view package.
 func Embed() error {
 	mg.Deps(BuildClient)
 
-	embed := sh.RunCmd("go", "run", "scripts/embed/embed.go", "-pkg", "view", "-base", "server/view")
+	embed := sh.RunCmd("go1.19.13", "run", "scripts/embed/embed.go",
+		"-pkg", "view",
+		"-base", "server/view")
 	embeds := map[string][]string{
 		"css":       {"-var", "cssResources", "-out", "server/view/static-css.go", "-gzip", "css/*.css"},
 		"images":    {"-var", "imageResources", "-out", "server/view/static-images.go", "images/*"},
@@ -100,17 +108,17 @@ func Embed() error {
 // Install rebuilds everything and then go-installs.
 func Install() error {
 	mg.Deps(Embed, GenGoProtoStubs)
-	return sh.Run("go", "install")
+	return sh.Run("go1.19.13", "install")
 }
 
 // GoGetTools uses "go get" to get and update necessary build tools for development.
 func GoGetTools() error {
-	goGet := sh.RunCmd("go", "get", "-u")
+	goGet := sh.RunCmd("go1.19.13", "get", "-u")
 
 	if err := goGet("github.com/gopherjs/gopherjs"); err != nil {
 		return err
 	}
-	if err := goGet("github.com/golang/protobuf/protoc-gen-go"); err != nil {
+	if err := goGet("google.golang.org/protobuf/cmd/protoc-gen-go"); err != nil {
 		return err
 	}
 	return goGet("github.com/johanbrandhorst/protobuf/protoc-gen-gopherjs")

@@ -21,7 +21,7 @@ import (
 	"io"
 	"text/template"
 
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/source"
 )
 
 const (

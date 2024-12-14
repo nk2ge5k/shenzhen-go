@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"html/template"
 
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model/pin"
 )
 
 // Part abstracts the implementation of a node. Concrete implementations should be

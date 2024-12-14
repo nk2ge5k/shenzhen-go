@@ -20,7 +20,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/source"
 )
 
 var (

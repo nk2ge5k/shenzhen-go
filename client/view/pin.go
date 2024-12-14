@@ -18,7 +18,7 @@ import (
 	"log"
 	"sort"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 // Pin represents a node pin visually, and has enough information to know

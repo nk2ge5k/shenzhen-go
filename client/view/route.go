@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"math/cmplx"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 const arrowSize = 5

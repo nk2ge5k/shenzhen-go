@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 var httpServerPins = pin.NewMap(
@@ -150,7 +150,7 @@ func (s *HTTPServer) Impl(*model.Node) model.PartImpl {
 	return model.PartImpl{
 		Imports: []string{
 			`"net/http"`,
-			`"github.com/google/shenzhen-go/parts"`,
+			`"shenzhen-go/parts"`,
 		},
 		Body: b.String(),
 		Tail: `close(requests)

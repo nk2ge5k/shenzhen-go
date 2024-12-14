@@ -16,6 +16,8 @@ syntax="proto3";
 
 package proto;
 
+option go_package = "shenzhen-go/proto/go";
+
 message Empty {}
 
 message NodePin {

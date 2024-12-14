@@ -20,7 +20,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/google/shenzhen-go/model"
+	"shenzhen-go/model"
 )
 
 var graphEditorTemplate = template.Must(template.New("graphEditor").Parse(string(templateResources["templates/graph.html"])))

@@ -18,8 +18,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 func init() {

@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
+	"shenzhen-go/source"
 )
 
 // ZipFinishMode is the finish point of a Zip part.

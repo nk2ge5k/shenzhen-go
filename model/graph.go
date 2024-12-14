@@ -21,7 +21,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/google/shenzhen-go/source"
+	"shenzhen-go/source"
 )
 
 var typeEmptyInterface = source.MustNewType("", "interface{}")

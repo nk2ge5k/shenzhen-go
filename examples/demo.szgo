@@ -1,6 +1,6 @@
 {
 	"name": "Demo",
-	"package_path": "github.com/google/shenzhen-go/examples/demo",
+	"package_path": "shenzhen-go/examples/demo",
 	"is_command": true,
 	"nodes": {
 		"Node 1": {

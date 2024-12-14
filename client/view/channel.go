@@ -18,7 +18,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 // Channel is the view's model of a channel.

@@ -28,8 +28,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/server/view"
+	"shenzhen-go/model"
+	pb "shenzhen-go/proto/go"
+	"shenzhen-go/server/view"
 )
 
 // New returns a new server.
@@ -44,6 +45,7 @@ type server struct {
 	uiParams     *view.Params
 	loadedGraphs map[string]*serveGraph
 	sync.Mutex
+	pb.UnsafeShenzhenGoServer
 }
 
 func (c *server) lookupGraph(key string) (*serveGraph, error) {

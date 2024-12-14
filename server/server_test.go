@@ -5,7 +5,7 @@ import (
 
 	"google.golang.org/grpc/codes"
 
-	"github.com/google/shenzhen-go/model"
+	"shenzhen-go/model"
 )
 
 func TestLookupGraph(t *testing.T) {

@@ -1,6 +1,6 @@
 {
 	"name": "HTTP Server Load Tester",
-	"package_path": "github.com/google/shenzhen-go/examples/http_hammer",
+	"package_path": "shenzhen-go/examples/http_hammer",
 	"is_command": true,
 	"nodes": {
 		"Aggregate and print": {

@@ -1,4 +1,5 @@
-//+build webview
+//go:build webview
+// +build webview
 
 // Copyright 2018 Google Inc.
 //
@@ -19,7 +20,7 @@ package main
 import (
 	"flag"
 
-	"github.com/zserge/webview"
+	webview "github.com/webview/webview_go"
 )
 
 func init() {

@@ -21,10 +21,10 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
-	"github.com/google/shenzhen-go/parts"
-	pb "github.com/google/shenzhen-go/proto/go"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
+	"shenzhen-go/parts"
+	pb "shenzhen-go/proto/go"
 )
 
 func code(err error) codes.Code {

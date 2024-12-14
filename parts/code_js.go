@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//+build js
+//go:build js
+// +build js
 
 package parts
 
@@ -21,8 +22,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/google/shenzhen-go/dom"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/dom"
+	"shenzhen-go/model/pin"
 )
 
 var (

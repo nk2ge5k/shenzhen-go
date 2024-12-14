@@ -15,8 +15,8 @@
 package parts
 
 import (
-	"github.com/google/shenzhen-go/model"
-	"github.com/google/shenzhen-go/model/pin"
+	"shenzhen-go/model"
+	"shenzhen-go/model/pin"
 )
 
 var prometheusMetricsHandlerPins = pin.NewMap(&pin.Definition{
@@ -53,7 +53,7 @@ func (PrometheusMetricsHandler) Clone() model.Part { return &PrometheusMetricsHa
 func (PrometheusMetricsHandler) Impl(*model.Node) model.PartImpl {
 	return model.PartImpl{
 		Imports: []string{
-			`"github.com/google/shenzhen-go/parts"`,
+			`"shenzhen-go/parts"`,
 			`"github.com/prometheus/client_golang/prometheus/promhttp"`,
 		},
 		Body: `h := promhttp.Handler()

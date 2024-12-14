@@ -20,7 +20,7 @@ import (
 	"math"
 	"math/cmplx"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 // Graph is the view-model of a graph.

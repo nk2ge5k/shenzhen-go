@@ -1,6 +1,6 @@
 {
 	"name": "HTTP Server",
-	"package_path": "github.com/google/shenzhen-go/examples/http_server",
+	"package_path": "shenzhen-go/examples/http_server",
 	"is_command": true,
 	"nodes": {
 		"Cache": {
@@ -43,7 +43,7 @@
 			"part": {
 				"imports": [
 					"\"net/http\"",
-					"\"github.com/google/shenzhen-go/parts\""
+					"\"shenzhen-go/parts\""
 				],
 				"body": [
 					"http.Error(input, \"server overload\", http.StatusServiceUnavailable)",
@@ -68,7 +68,7 @@
 				"imports": [
 					"\"net/http\"",
 					"\"strconv\"",
-					"\"github.com/google/shenzhen-go/parts\""
+					"\"shenzhen-go/parts\""
 				],
 				"body": [
 					"q := input.Request.URL.Query()",
@@ -123,7 +123,7 @@
 					"\"math/cmplx\"",
 					"\"net/http\"",
 					"\"time\"",
-					"\"github.com/google/shenzhen-go/parts\""
+					"\"shenzhen-go/parts\""
 				],
 				"body": [
 					"const tileW = 320",
@@ -406,7 +406,7 @@
 		"Serve from cache": {
 			"part": {
 				"imports": [
-					"\"github.com/google/shenzhen-go/parts\""
+					"\"shenzhen-go/parts\""
 				],
 				"body": [
 					"http.ServeContent(",
@@ -440,7 +440,7 @@
 					"\"time\"",
 					"\"os\"",
 					"\"os/signal\"",
-					"\"github.com/google/shenzhen-go/parts\""
+					"\"shenzhen-go/parts\""
 				],
 				"head": [
 					""

@@ -23,12 +23,12 @@ import (
 
 	"github.com/gopherjs/gopherjs/js"
 
-	"github.com/google/shenzhen-go/client/controller"
-	"github.com/google/shenzhen-go/client/view"
-	"github.com/google/shenzhen-go/dom"
-	"github.com/google/shenzhen-go/model"
-	_ "github.com/google/shenzhen-go/parts"
-	pb "github.com/google/shenzhen-go/proto/js"
+	"shenzhen-go/client/controller"
+	"shenzhen-go/client/view"
+	"shenzhen-go/dom"
+	"shenzhen-go/model"
+	_ "shenzhen-go/parts"
+	pb "shenzhen-go/proto/js"
 )
 
 func main() {

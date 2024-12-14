@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//+build js
+//go:build js
+// +build js
 
 package parts
 
-import "github.com/google/shenzhen-go/dom"
+import "shenzhen-go/dom"
 
 var (
 	inputZipInputNum    = doc.ElementByID("zip-inputnum")

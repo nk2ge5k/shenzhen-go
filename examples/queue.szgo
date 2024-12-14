@@ -1,6 +1,6 @@
 {
 	"name": "Queue",
-	"package_path": "github.com/google/shenzhen-go/examples/queue",
+	"package_path": "shenzhen-go/examples/queue",
 	"is_command": true,
 	"nodes": {
 		"Generate numbers": {

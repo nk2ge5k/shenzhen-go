@@ -5,9 +5,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/google/shenzhen-go/parts"
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"html/template"
 	"image"
 	"image/color"
@@ -19,9 +16,13 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
+	"shenzhen-go/parts"
 	"strconv"
 	"sync"
 	"time"
+
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 var _ = runtime.Compiler

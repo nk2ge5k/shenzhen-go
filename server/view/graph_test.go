@@ -17,7 +17,7 @@ package view
 import (
 	"testing"
 
-	"github.com/google/shenzhen-go/model"
+	"shenzhen-go/model"
 )
 
 type nopWriter struct{}

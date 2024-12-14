@@ -17,7 +17,7 @@ package view
 import (
 	"fmt"
 
-	"github.com/google/shenzhen-go/dom"
+	"shenzhen-go/dom"
 )
 
 // Group includes handy methods for using SVG groups.

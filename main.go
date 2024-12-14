@@ -31,10 +31,10 @@ import (
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
 	"google.golang.org/grpc"
 
-	_ "github.com/google/shenzhen-go/parts"
-	pb "github.com/google/shenzhen-go/proto/go"
-	"github.com/google/shenzhen-go/server"
-	"github.com/google/shenzhen-go/server/view"
+	_ "shenzhen-go/parts"
+	pb "shenzhen-go/proto/go"
+	"shenzhen-go/server"
+	"shenzhen-go/server/view"
 )
 
 const pingMsg = "Pong!"
