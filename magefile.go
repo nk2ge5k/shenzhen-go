@@ -25,6 +25,8 @@ import (
 	"github.com/magefile/mage/target"
 )
 
+const goBin = "go1.19.13"
+
 // Runs protoc to generate protobuf stubs in proto/go.
 func GenGoProtoStubs() error {
 	mod, err := target.Path("proto/go/shenzhen-go.pb.go", "proto/shenzhen-go.proto")
@@ -79,7 +81,7 @@ func BuildClient() error {
 func Embed() error {
 	mg.Deps(BuildClient)
 
-	embed := sh.RunCmd("go1.19.13", "run", "scripts/embed/embed.go",
+	embed := sh.RunCmd(goBin, "run", "scripts/embed/embed.go",
 		"-pkg", "view",
 		"-base", "server/view")
 	embeds := map[string][]string{
@@ -108,12 +110,12 @@ func Embed() error {
 // Install rebuilds everything and then go-installs.
 func Install() error {
 	mg.Deps(Embed, GenGoProtoStubs)
-	return sh.Run("go1.19.13", "install")
+	return sh.Run(goBin, "build")
 }
 
 // GoGetTools uses "go get" to get and update necessary build tools for development.
 func GoGetTools() error {
-	goGet := sh.RunCmd("go1.19.13", "get", "-u")
+	goGet := sh.RunCmd(goBin, "get", "-u")
 
 	if err := goGet("github.com/gopherjs/gopherjs"); err != nil {
 		return err

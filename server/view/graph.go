@@ -23,7 +23,8 @@ import (
 	"shenzhen-go/model"
 )
 
-var graphEditorTemplate = template.Must(template.New("graphEditor").Parse(string(templateResources["templates/graph.html"])))
+var graphEditorTemplate = template.Must(
+	template.New("graphEditor").Parse(string(templateResources["templates/graph.html"])))
 
 type editorInput struct {
 	Params              *Params

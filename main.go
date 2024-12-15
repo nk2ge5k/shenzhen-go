@@ -166,11 +166,8 @@ Usage:
   
 The (optional) commands are:
   
-  build     generate and build Go packages
   edit      launch a Shenzhen Go server and open the editor interface
   generate  generate Go packages
-  install   generate and install Go packages
-  run       generate Go package and run binaries
   serve     launch a Shenzhen Go server
   
 "edit" is the default command.
@@ -191,19 +188,11 @@ func main() {
 	args := flag.Args()
 	if len(args) > 0 {
 		switch args[0] {
-		case "build":
-			log.Fatalf("TODO: build is not yet implemented")
 		case "edit":
 			args = args[1:]
-		case "generate":
-			log.Fatalf("TODO: generate is not yet implemented")
 		case "help":
 			usage()
 			return
-		case "install":
-			log.Fatalf("TODO: install is not yet implemented")
-		case "run":
-			log.Fatalf("TODO: run is not yet implemented")
 		case "serve":
 			if len(args) > 1 {
 				log.Print(`Note: extra arguments to "serve" command are ignored`)
